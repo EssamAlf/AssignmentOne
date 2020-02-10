@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TemperatureConverter</string>
+    <string name="action_settings">Settings</string>
+    <string name="convert_string">Convert</string>
+    <string name="temperature_string">Temperature</string>
+    <string name="no_value_string">No Value</string>
+    <string name="convert_to_celsius">Convert To Celsius</string>
+    <string name="celsius_hint">Celsius</string>
+    <string name="convert_to_celsius_string">Convert to Celsius</string>
+    <string name="no_celsius_string">No Value</string>
+    <string name="fahrenheit_string">Fahrenheit</string>
+    <string name="convert_to_fahrenheit_string">Convert to Fahrenheit</string>
+</resources>
