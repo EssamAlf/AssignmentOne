@@ -6,14 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.util.Log;
+import android.util.Log
+import android.widget.EditText
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
+import kotlin.math.log
 
 
 class MainActivity : AppCompatActivity() {
-    val TAG = "My message"
+    val TAG = "StateChange"
 
     fun convertTemperature(view: View) {
         if (temperatureText.text.isNotEmpty()) {
@@ -51,6 +53,8 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        Log.i(TAG,"onCreate")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -68,6 +72,39 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i(TAG,"onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i(TAG,"onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i(TAG,"onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i(TAG,"onPause")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i(TAG,"onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i(TAG,"onDestroy")
+    }
+
+
+
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
         Log.i(TAG,"onSaveInstanceState")
